@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Payments{% endblock %}
+{% block content %}
+<div class="app-heading"><div><div class="eyebrow">GOOD NEWS, IN NUMBERS</div><h1>Money <span class="gradient-text">received.</span></h1><p>A record of payments marked as received in this workspace.</p></div></div>
+<div class="stat-grid one-stat"><div class="stat-card"><div class="stat-top"><span>Total recorded payments</span><span class="stat-icon green">✓</span></div><strong>{{ total|money }}</strong><small>Across {{ payments|length }} payment record(s)</small></div></div>
+<section class="panel"><div class="panel-heading"><div><h2>Payment history</h2><p>Every recorded payment in one list</p></div></div><div class="table-wrap"><table><thead><tr><th>DATE</th><th>INVOICE</th><th>CLIENT</th><th>METHOD</th><th>REFERENCE</th><th>AMOUNT</th></tr></thead><tbody>{% for p in payments %}<tr><td>{{ p.paid_on }}</td><td><a class="table-main" href="{{ url_for('invoice_detail',invoice_id=p.invoice_id) }}">{{ p.invoice_no }}</a><small>{{ p.title }}</small></td><td>{{ p.client_name }}</td><td>{{ p.method }}</td><td>{{ p.reference }}</td><td class="amount-cell">{{ p.amount|money }}</td></tr>{% else %}<tr><td colspan="6"><div class="empty-state">No payments recorded yet. Mark an invoice as paid to add one.</div></td></tr>{% endfor %}</tbody></table></div></section>
+{% endblock %}

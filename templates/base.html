@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}CreatorLedger{% endblock %} · CreatorLedger</title>
+  <meta name="description" content="Invoices, payments, GST and TDS tracking for Indian creators.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="{{ url_for('home') }}"><span class="brand-mark">c</span><span>creator<span class="brand-light">ledger</span><small>FINANCE, MADE HUMAN</small></span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">☰</button>
+    <nav class="nav-links">
+      <a href="{{ url_for('dashboard') }}">Dashboard</a><a href="{{ url_for('clients') }}">Clients</a><a href="{{ url_for('invoices') }}">Invoices</a><a href="{{ url_for('payments') }}">Payments</a><a href="{{ url_for('reports') }}">Reports</a>
+    </nav>
+    <a class="button button-small button-dark top-cta" href="{{ url_for('dashboard') }}">Open app <span>↗</span></a>
+  </header>
+  <main class="page-shell">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}<div class="flash-stack">{% for category, message in messages %}<div class="flash flash-{{ category }}">{{ message }} <button onclick="this.parentElement.remove()" aria-label="Dismiss">×</button></div>{% endfor %}</div>{% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer"><div class="brand footer-brand"><span class="brand-mark">c</span><span>creator<span class="brand-light">ledger</span></span></div><span>Made for independent work in India. <span class="footer-dot">●</span> Demo build</span><span class="footer-credit">Created by <strong>Rahul Singh</strong></span><span>© {{ today[:4] }} CreatorLedger</span></footer>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

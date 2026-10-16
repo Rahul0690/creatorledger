@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Invoices, without the chaos{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy reveal">
+    <div class="eyebrow"><span class="eyebrow-dot"></span> BUILT FOR INDIA'S INDEPENDENT CREATORS</div>
+    <h1>Your work deserves<br>to get <span class="gradient-text">paid on time.</span></h1>
+    <p class="hero-sub">Invoices, GST, TDS and payment follow-ups — finally in one calm, clear workspace. Spend less time chasing money and more time doing your best work.</p>
+    <div class="hero-actions"><a class="button button-primary" href="{{ url_for('dashboard') }}">Explore the dashboard <span>↗</span></a><a class="text-link" href="#features">See how it works <span>↓</span></a></div>
+    <div class="hero-proof"><div class="avatar-stack"><span>R</span><span>A</span><span>S</span><span>+</span></div><div><strong>Made for the one-person business</strong><small>Freelancers · Designers · Creators</small></div></div>
+  </div>
+  <div class="hero-visual reveal">
+    <div class="visual-orbit orbit-a"></div><div class="visual-orbit orbit-b"></div>
+    <div class="dashboard-preview">
+      <div class="preview-top"><div class="preview-dots"><i></i><i></i><i></i></div><span>YOUR MONEY, AT A GLANCE</span><span class="live-pill"><b></b> LIVE DEMO</span></div>
+      <div class="preview-greeting"><div><small>MONDAY IS A GOOD DAY</small><h3>Looking good, creator <span>✳</span></h3></div><div class="preview-avatar">CL</div></div>
+      <div class="preview-stats"><div><small>Total billed</small><strong>₹79,000</strong><span class="trend">↗ Across 3 invoices</span></div><div><small>Still to collect</small><strong>₹60,120</strong><span class="trend amber">● 2 need a nudge</span></div></div>
+      <div class="preview-chart-head"><strong>Cash flow, simplified</strong><span>Last 6 months⌄</span></div>
+      <div class="mini-chart"><div class="chart-grid"></div><div class="chart-bars"><i style="height:38%"></i><i style="height:52%"></i><i style="height:44%"></i><i style="height:74%"></i><i style="height:60%"></i><i style="height:91%"></i></div><div class="chart-labels"><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div></div>
+      <div class="preview-invoice"><div class="invoice-icon">↗</div><div><strong>Website UI design</strong><small>INV-2026-002 · Studio North</small></div><span class="status status-pending">Pending</span><b>₹49,560</b></div>
+    </div>
+    <div class="float-card float-paid"><span class="float-icon">✓</span><div><small>PAYMENT RECEIVED</small><strong>₹25,000</strong><span>That felt good.</span></div></div>
+    <div class="float-card float-reminder"><span class="reminder-icon">✉</span><div><small>GENTLE NUDGE</small><strong>Payment reminder</strong><span>One less thing to remember.</span></div></div>
+  </div>
+</section>
+<section class="trust-strip"><span>LESS ADMIN. MORE CREATIVE.</span><div><b>GST</b> ready invoices</div><div><b>UPI</b> payment links</div><div><b>TDS</b> visibility</div><div><b>₹</b> all in one view</div></section>
+<section class="section" id="features"><div class="section-heading reveal"><div class="eyebrow">THE BORING STUFF, SORTED</div><h2>Small business energy.<br><span class="muted">Big business clarity.</span></h2><p>Everything you need to keep the business side moving, without needing a finance degree.</p></div>
+<div class="feature-grid">
+  <article class="feature-card feature-purple reveal"><div class="feature-icon">▤</div><span class="feature-kicker">01 / INVOICING</span><h3>Invoices that mean business.</h3><p>Create clear invoices with client details, GST, due dates and a clean printable layout in a few clicks.</p><div class="feature-visual invoice-mini"><div><span>INVOICE</span><b>₹ 42,000</b></div><hr><p>Website UI design <span>₹42,000</span></p><p>GST (18%) <span>₹7,560</span></p><p class="mini-total">Total <strong>₹49,560</strong></p></div></article>
+  <article class="feature-card feature-yellow reveal"><div class="feature-icon">↗</div><span class="feature-kicker">02 / PAYMENTS</span><h3>Know what has landed.</h3><p>Track pending and paid invoices, keep a payment trail, and generate a UPI intent link for your client.</p><div class="payment-orbit"><div class="orbit-ring"></div><div class="rupee-bubble">₹</div><span class="orbit-tag tag-one">UPI</span><span class="orbit-tag tag-two">PAID ✓</span><span class="orbit-tag tag-three">PENDING</span></div></article>
+  <article class="feature-card feature-green reveal"><div class="feature-icon">◉</div><span class="feature-kicker">03 / TAX VISIBILITY</span><h3>GST in. TDS out. Clear.</h3><p>See the estimated tax amounts and net receivable together, so the numbers don't surprise you later.</p><div class="tax-equation"><div><small>INVOICE</small><strong>₹11,800</strong></div><span>−</span><div><small>TDS EST.</small><strong>₹1,000</strong></div><span>=</span><div class="tax-result"><small>NET</small><strong>₹10,800</strong></div></div></article>
+</div></section>
+<section class="cta-band reveal"><div><div class="eyebrow light-eyebrow">YOUR NEXT CHAPTER STARTS HERE</div><h2>Make getting paid<br>feel like the easy part.</h2><p>Open the demo workspace and see your freelance finances come together.</p></div><a href="{{ url_for('dashboard') }}" class="button button-white">Enter CreatorLedger <span>↗</span></a><div class="cta-sparkle">✳</div></section>
+<section class="section workflow"><div class="section-heading reveal"><div class="eyebrow">A BETTER KIND OF ROUTINE</div><h2>From “sent the invoice”<br>to <span class="gradient-text">“payment received.”</span></h2></div><div class="steps"><div class="step reveal"><span>01</span><div class="step-line"></div><h3>Add your client</h3><p>Save billing details once. Reuse them when the next project lands.</p></div><div class="step reveal"><span>02</span><div class="step-line"></div><h3>Send the invoice</h3><p>Set the amount, tax assumptions and due date. Keep the record tidy.</p></div><div class="step reveal"><span>03</span><div class="step-line"></div><h3>Follow up, calmly</h3><p>See what's pending, prepare a reminder and record when the money arrives.</p></div></div></section>
+{% endblock %}

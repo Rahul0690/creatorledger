@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %}Page not found{% endblock %}
+{% block content %}<section class="not-found"><div class="eyebrow">404 / WRONG TURN</div><h1>This page took<br>a little <span class="gradient-text">detour.</span></h1><p>The page you're looking for isn't here.</p><a class="button button-primary" href="{{ url_for('dashboard') }}">Back to dashboard ↗</a></section>{% endblock %}

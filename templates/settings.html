@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Settings{% endblock %}
+{% block content %}
+<div class="app-heading"><div><div class="eyebrow">MAKE IT YOURS</div><h1>Workspace <span class="gradient-text">settings.</span></h1><p>Demo configuration and next steps before production.</p></div></div>
+<div class="settings-grid"><section class="panel settings-panel"><div class="settings-icon">⌘</div><h2>Workspace profile</h2><p>This demo currently uses one shared local workspace. Add authentication and business profile settings before deploying publicly.</p><div class="settings-row"><span>Application</span><strong>CreatorLedger</strong></div><div class="settings-row"><span>Database</span><strong>SQLite · local</strong></div><div class="settings-row"><span>Environment</span><strong class="settings-demo">Demo mode</strong></div></section><section class="panel settings-panel"><div class="settings-icon">⚑</div><h2>Integrations checklist</h2><p>These services need real credentials and server-side setup to go live.</p><div class="check-row"><span>UPI payments</span><b>Intent link demo</b></div><div class="check-row"><span>Email reminders</span><b>Not connected</b></div><div class="check-row"><span>Tax compliance</span><b>Manual review</b></div><div class="check-row"><span>Authentication</span><b>Future scope</b></div></section></div>
+{% endblock %}

@@ -1,0 +1,27 @@
+# Python virtual environment and bytecode
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Local database and SQLite journal files (may contain client data)
+creatorledger.db
+creatorledger.db-*
+*.sqlite
+*.sqlite3
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test / coverage output
+.coverage
+htmlcov/
+.pytest_cache/
